@@ -3,6 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const certificateRoutes = require("./routes/certificateRoutes");
+const store_photo = require("./routes/store_photo");
 
 const app = express();
 
@@ -19,6 +20,7 @@ mongoose
 
 // Routes
 app.use("/api", certificateRoutes);
+app.use("/api", store_photo);
 
 // Start Server
 const PORT = 3000;
